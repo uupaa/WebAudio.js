@@ -42,7 +42,7 @@ function testWMAudioUtil_setup(test, pass, miss) {
 }
 
 function testWMAudioUtil_getAutoPlayFunction(test, pass, miss) {
-    global.autoPlayTask = new Task(1, function() {
+    global.autoPlayTask = new TestTask(1, function() {
         _loadAndAutoPlay(ASSETS_DIR + "game.m4a", true, 3, function() {
             test.done(pass());
         });

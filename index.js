@@ -1,3 +1,3 @@
-//module.exports = require("./bin/WMAudioUtil");
-module.exports = require("./lib/WMAudioUtil");
+//module.exports = require("./bin/WebAudio");
+module.exports = require("./lib/WebAudio");
 

@@ -1,59 +1,67 @@
 {
-  "name": "uupaa.wmaudioutil.js",
-  "version": "0.0.2",
-  "description": "Audio and WebAudio utility functions.",
-  "url": "https://github.com/uupaa/WMAudioUtil.js",
-  "keywords": [
-    "iPhone",
-    "iOS",
-    "Audio",
-    "WebAudio",
-    "util",
-    "WebModule",
-    "uupaa",
-    "Unstable"
-  ],
+  "name": "uupaa.webaudio.js",
+  "version": "0.0.4",
+  "description": "Create new WebAudio context.",
+  "url": "https://github.com/uupaa/WebAudio.js",
+  "keywords": ["WebAudio", "Audio", "iOS", "uupaa", "WebModule", "Unstable"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/uupaa/WMAudioUtil.js.git"
+    "url": "https://github.com/uupaa/WebAudio.js.git"
   },
   "scripts": {
     "sync": "node ../WebModule/run/sync.js; npm update; node ../WebModule/run/page.js",
-    "watch": "node ../WebModule/run/watch.js --verbose --action minify",
-    "minify": "node ../WebModule/run/minify.js --verbose --strict --keep --pretty",
-    "build": "node ../WebModule/run/minify.js --verbose --strict --module",
+    "wiki": "node ../WebModule/run/wiki.js",
+    "min": "node ../WebModule/run/minify.js --verbose --strict --keep --pretty",
+    "build": "node ../WebModule/run/minify.js --verbose --strict --keep --release",
+    "watch": "node ../WebModule/run/watch.js --verbose --run lint",
     "page": "node ../WebModule/run/page.js --verbose",
-    "test": "npm run minify; npm run node; npm run browser",
-    "node": "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js",
-    "noded": "NODE_ENV=production NODE_PATH=lib node --debug-brk --harmony test/index.node.js",
-    "browser": "open http://localhost:8000/WMAudioUtil.js/test/index.html",
-    "sim": "node ../WebModule/run/sim.js http://localhost:8000/WMAudioUtil.js/test/index.html",
+    "test": "npm run min; npm run node; npm run browser",
+    "node": "NODE_ENV=production NODE_PATH=lib node test/node/index.js",
+    "noded": "NODE_ENV=production NODE_PATH=lib node --debug-brk test/node/index.js",
+    "browser": "open http://localhost:8000/WebAudio.js/test/browser/index.html",
+    "el": "electron test/el",
+    "nw": "nw test/nw",
+    "add-src": "node ../WebModule/run/add-src.js",
+    "add-subclass": "node ../WebModule/run/add-subclass.js",
+    "sim": "node ../WebModule/run/sim.js http://localhost:8000/WebAudio.js/test/browser/index.html",
     "simx": "node ../WebModule/run/sim.js stop",
-    "hint": "jshint lib/*.js",
+    "lint": "eslint lib/*.js",
     "score": "node ../WebModule/run/score.js; open lint/plato/index.html",
     "patch": "node ../WebModule/run/patch.js",
+    "setup": "node ../WebModule/run/setup.js",
     "start": "cd ../; Python -m SimpleHTTPServer 8000 &",
     "stop": "killall -- Python -m SimpleHTTPServer 8000; exit 0"
   },
   "webmodule": {
-    "source": [
-      "lib/WMAudioUtil.js"
-    ],
-    "output": "release/WMAudioUtil.min.js",
-    "target": [
-      "browser"
-    ],
-    "label": [
-      "@dev"
-    ]
+    "develop": false,
+    "label": ["@dev"],
+    "browser": {
+      "output": "release/WebAudio.b.min.js",
+      "source": [
+        "lib/WebAudio.js"
+      ]
+    },
+    "nw": {
+      "output": "release/WebAudio.nw.min.js",
+      "source": [
+        "lib/WebAudio.js"
+      ]
+    },
+    "el": {
+      "output": "release/WebAudio.el.min.js",
+      "source": [
+        "lib/WebAudio.js"
+      ]
+    }
   },
   "dependencies": {},
   "devDependencies": {
-    "uupaa.wmcachetest.js": ""
+    "uupaa.es.js": "",
+    "uupaa.task.js": ""
   },
   "lib": "./lib/",
   "main": "./index.js",
-  "author": "uupaa <uupaa.js@gmail.com>",
+  "author": "uupaa",
   "license": "MIT",
   "contributors": []
 }

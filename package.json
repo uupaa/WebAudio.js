@@ -1,6 +1,6 @@
 {
   "name": "uupaa.webaudio.js",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Create new WebAudio context.",
   "url": "https://github.com/uupaa/WebAudio.js",
   "keywords": ["WebAudio", "Audio", "iOS", "uupaa", "WebModule", "Unstable"],

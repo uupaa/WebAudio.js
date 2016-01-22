@@ -17,10 +17,20 @@ This module made of [WebModule](https://github.com/uupaa/WebModule).
 <script src="<module-dir>/lib/WebAudio.js"></script>
 <script>
 
-var audioContext = WebAudio.getContext();
-
-console.log( audioContext.currentTime ); // -> 0.000000000 (maybe)
+WebAudio.init(function(audioContext) { // @arg AudioContext|null
+    if (WebAudio.ready) {
+        playDemoSound( WebAudio.getContext() );
+    } else {
+        alert("WebAudio not function");
+    }
+}, document.body);
 
 </script>
+```
+
+Instead an easy way.
+
+```js
+WebAudio.init(playDemoSound);
 ```
 

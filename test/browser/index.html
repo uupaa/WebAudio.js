@@ -4,27 +4,17 @@
 
 <script src="../../lib/WebModule.js"></script>
 <script>
-WebModule.verify  = true;
-WebModule.verbose = true;
-WebModule.publish = true;
+WebModule.VERIFY  = true;
+WebModule.VERBOSE = true;
+WebModule.PUBLISH = true;
 </script>
 
-<script src="../../node_modules/uupaa.es.js/lib/ES.js"></script>
 <script src="../../node_modules/uupaa.task.js/lib/Task.js"></script>
 <script src="../../node_modules/uupaa.task.js/lib/TaskMap.js"></script>
+<script src="../../node_modules/uupaa.fileloader.js/lib/FileLoader.js"></script>
 <script src="../wmtools.js"></script>
 <script src="../../lib/WebAudio.js"></script>
 <script src="../testcase.js"></script>
-
-<script>
-WebAudio.init(function() {
-    if (WebAudio.ready) {
-        test1( WebAudio.getContext() );
-    } else {
-        alert("WebAudio not function");
-    }
-}, document.body);
-</script>
 
 <p>
 Lorem ipsum dolor sit amet, illum dictas interpretaris an per. His labore deserunt eleifend ex. Pro ut ignota democritum, eos bonorum moderatius interpretaris no. An offendit salutatus vulputate quo, omnis reque definitionem ex usu, ad sed velit ridens fabellas.

@@ -1,6 +1,6 @@
 {
   "name": "uupaa.webaudio.js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Create new WebAudio context.",
   "url": "https://github.com/uupaa/WebAudio.js",
   "keywords": ["WebAudio", "Audio", "iOS", "uupaa", "WebModule", "Unstable"],
@@ -56,8 +56,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "uupaa.es.js": "",
-    "uupaa.task.js": ""
+    "uupaa.task.js": "",
+    "uupaa.fileloader.js": ""
   },
   "lib": "./lib/",
   "main": "./index.js",

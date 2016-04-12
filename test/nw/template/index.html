@@ -4,26 +4,15 @@
 
 <script src="../../lib/WebModule.js"></script>
 <script>
-WebModule.verify  = __WEBMODULE_VERIFY__;
-WebModule.verbose = __WEBMODULE_VERBOSE__;
-WebModule.publish = __WEBMODULE_PUBLISH__;
+WebModule.VERIFY  = __WEBMODULE_VERIFY__;
+WebModule.VERBOSE = __WEBMODULE_VERBOSE__;
+WebModule.PUBLISH = __WEBMODULE_PUBLISH__;
 </script>
 
 __MODULES__
 __WMTOOLS__
 __SOURCES__
-__OUTPUT__
 __TEST_CASE__
-
-<script>
-WebAudio.init(function() {
-    if (WebAudio.ready) {
-        test1( WebAudio.getContext() );
-    } else {
-        alert("WebAudio not function");
-    }
-}, document.body);
-</script>
 
 <p>
 Lorem ipsum dolor sit amet, illum dictas interpretaris an per. His labore deserunt eleifend ex. Pro ut ignota democritum, eos bonorum moderatius interpretaris no. An offendit salutatus vulputate quo, omnis reque definitionem ex usu, ad sed velit ridens fabellas.
